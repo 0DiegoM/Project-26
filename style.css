@@ -1,0 +1,41 @@
+body {
+    background: linear-gradient(rgb(173, 255, 102), rgb(143, 255, 102), rgb(112, 255, 102),rgb(102, 255, 184), rgb(102, 255, 214), rgb(102, 255, 245)) ;
+}
+
+span {
+    font-size: 30px;
+}
+
+#camera, #result {
+border: 2px dashed orange;
+width: 400px;
+height: 300px;
+
+}
+
+#resultEmotionName, #resultEmotionName2 {
+    color: salmon;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.emoji {
+    font-size: 48px;
+}
+
+.heading {
+font-size: 18px;
+border-radius: 10px;
+letter-spacing: 10px;
+}
+
+label
+{
+    font-size: 14px;
+  color: #62b33a;
+padding: 6px;
+border-radius: 10px;
+background-color: white;
+}
+
+
+
