@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(rgb(173, 255, 102), rgb(143, 255, 102), rgb(112, 255, 102),rgb(102, 255, 184), rgb(102, 255, 214), rgb(102, 255, 245)) ;
+    background: linear-gradient(rgb(240, 255, 102), rgb(248, 255, 102), rgb(256, 255, 102),rgb(267, 255, 184), rgb(270, 255, 214), rgb(278, 255, 245)) ;
 }
 
 span {
@@ -26,12 +26,15 @@ height: 300px;
 font-size: 18px;
 border-radius: 10px;
 letter-spacing: 10px;
+background-color: aquamarine;
+width: 700px;
+border-radius: 250px;
 }
 
 label
 {
     font-size: 14px;
-  color: #62b33a;
+color: #62b33a;
 padding: 6px;
 border-radius: 10px;
 background-color: white;
