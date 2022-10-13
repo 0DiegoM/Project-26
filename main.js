@@ -1,6 +1,6 @@
 //https://teachablemachine.withgoogle.com/models/znK56WAKn/
 
-predicion1 = '';
+prediccion1 = '';
 
 Webcam.set ({
     width: 350,
@@ -21,7 +21,7 @@ function takeSnapshot() {
 
 console.log('ml5 version', ml5.version);
 
-classifier = ml5.imageClassifer('https://teachablemachine.withgoogle.com/models/znK56WAKn/model.json', modelLoaded);
+classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/znK56WAKn/model.json', modelLoaded);
 
 function modelLoaded() {
     console.log('Model Loaded!');
@@ -29,7 +29,34 @@ function modelLoaded() {
 
 function speak() {
     var synth = window.speechSynthesis;
-    speakData1 = 'La prediccion es'+predicion1;
+    speakData1 = 'La prediccion es'+prediccion1;
     var utterThis = new SpeechSynthesisUtterance(speakData1);
     synth.speak(utterThis);
 }
+
+function Predecir() {
+    img = document.getElementById('captured_image');
+classifier.classify(img, gotResult);
+}
+
+function gotResult(error, results) {
+    if(error) {
+        console.error(error);
+    } else {
+        console.log(results);
+        document.getElementById("resultEmotionName").innerHTML = results[0].label;
+        prediccion1 = results[0].label;
+        speak();
+
+        if (results[0].label=="Bien") {
+            document.getElementById("updateEmoji").innerHTML = '👍';
+        } 
+        if (results[0].label=="Perfecto") {
+            document.getElementById("updateEmoji").innerHTML = '👌';
+        } 
+        if (results[0].label=="Victoria") {
+            document.getElementById("updateEmoji").innerHTML = '✌️';
+        } 
+    }
+    }
+
